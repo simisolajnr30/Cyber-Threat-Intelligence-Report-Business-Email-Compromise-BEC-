@@ -21,3 +21,28 @@ Rather than using malware or malicious attachments, the attacker relies on socia
 # 2. Analyze the Email Header
 
 **Subject**
+
+```splunk
+| Immediate Action Required: Wire Transfer Request
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
