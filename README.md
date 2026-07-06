@@ -25,6 +25,20 @@ Rather than using malware or malicious attachments, the attacker relies on socia
 ```splunk
  Immediate Action Required: Wire Transfer Request
 ```
+The subject creates a sense of urgency, encouraging the recipient to act without proper verification.
+
+---
+
+**From**
+
+```splunk
+ CEO <ceo@ceorp.com>
+```
+
+The sender claims to be the CEO.
+
+However, this identity cannot be trusted because the authentication mechanisms fail.
+
 
 
 
