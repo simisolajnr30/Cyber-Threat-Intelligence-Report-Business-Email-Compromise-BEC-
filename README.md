@@ -23,7 +23,7 @@ Rather than using malware or malicious attachments, the attacker relies on socia
 **Subject**
 
 ```splunk
-| Immediate Action Required: Wire Transfer Request
+ Immediate Action Required: Wire Transfer Request
 ```
 
 
