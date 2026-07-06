@@ -39,6 +39,44 @@ The sender claims to be the CEO.
 
 However, this identity cannot be trusted because the authentication mechanisms fail.
 
+---
+
+**Return-Path**
+
+```splunk
+ <ceo@ceorp.com>
+```
+The Return-Path matches the visible sender, but this alone does not prove authenticity because attackers can spoof this value.
+
+---
+
+**Authentication Results**
+
+```splunk
+ spf=fail
+dkim=fail
+dmarc=fail
+```
+
+This is the strongest technical evidence that the email is fraudulent.
+
+**SPF Failed**
+
+The sending server is not authorized to send email for ceorp.com.
+
+**DKIM Failed**
+
+The digital signature could not be validated, indicating the email was not cryptographically verified.
+
+**DMARC Failed**
+
+DMARC combines SPF and DKIM validation. Since both failed, DMARC also failed.
+
+This strongly suggests sender spoofing.
+
+---
+
+
 
 
 
