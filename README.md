@@ -207,10 +207,14 @@ finance@recipient.com
 **MITRE Technique**   	**ID**     	**Evidence**
   
 Phishing	               T1566        	Fraudulent email sent to finance department
+
 Spearphishing	          T1566.001	    Targeted message aimed at finance personnel
+
 Impersonation	          T1656        	Attacker impersonates the CEO
+
 Gather Victim Identity  T1589        	Finance staff selected as target
 Information	
+
 Trusted Relationship   	T1199	        Exploits trust between executives and finance
 
 
