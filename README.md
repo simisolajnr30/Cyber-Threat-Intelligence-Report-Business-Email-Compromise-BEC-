@@ -133,11 +133,15 @@ This domain appears inside the Message-ID and likely belongs to the attacker's i
  ---
  
  **Infrastructure Summary**
+
+ ---
+
+ infrastructure	Purpose
  
-  infrastructure	Purpose
-  ---
 attacker-infrastructure.com      	SMTP relay
+
 attacker-infra.com	                Message-ID generation
+
 localhost.localdomain	             Local mail server 
  
 
