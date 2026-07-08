@@ -136,14 +136,13 @@ This domain appears inside the Message-ID and likely belongs to the attacker's i
 
  ---
 
- **infrastructure	Purpose**
- 
-attacker-infrastructure.com           	SMTP relay
+ ## Attacker Infrastructure
 
-attacker-infra.com	                     Message-ID generation
-
-localhost.localdomain	                   Local mail server 
- 
+| Infrastructure | Purpose |
+|---------------------------|------------------------|
+| attacker-infrastructure.com | SMTP relay |
+| attacker-infra.com | Message-ID generation |
+| localhost.localdomain | Local mail server |
 ---
 
 # 4. Extract Indicators of Compromise (IOCs)
