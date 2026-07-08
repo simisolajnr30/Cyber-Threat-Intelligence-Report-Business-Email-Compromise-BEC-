@@ -136,19 +136,82 @@ This domain appears inside the Message-ID and likely belongs to the attacker's i
 
  ---
 
- infrastructure	Purpose
+ **infrastructure	Purpose**
  
-attacker-infrastructure.com      	SMTP relay
+attacker-infrastructure.com           	SMTP relay
 
-attacker-infra.com	                Message-ID generation
+attacker-infra.com	                     Message-ID generation
 
-localhost.localdomain	             Local mail server 
+localhost.localdomain	                   Local mail server 
  
+---
 
+# 4. Extract Indicators of Compromise (IOCs)
 
+**Domains**
 
+```splunk
+ ceorp.com (spoofed)
+attacker-infrastructure.com
+attacker-infra.com
+```
+---
 
+**Email Address**
 
+```splunk
+ ceo@ceorp.com
+```
+Spoofed sender identity.
+
+---
+
+**Message-ID**
+
+```splunk
+ 6666@attacker-infra.com
+```
+
+---
+
+**Subject**
+
+```splunk
+ Immediate Action Required:
+Wire Transfer Request
+```
+Useful for email hunting.
+
+---
+
+**Authentication Indicators**
+
+```splunk
+ SPF Failure
+DKIM Failure
+DMARC Failure
+```
+
+---
+
+**Recipient Target**
+
+```splunk
+finance@recipient.com
+```
+
+---
+
+# 5. Finance teams are common BEC targets.
+
+**MITRE Technique**   	**ID**     	**Evidence**
+  
+Phishing	               T1566        	Fraudulent email sent to finance department
+Spearphishing	          T1566.001	    Targeted message aimed at finance personnel
+Impersonation	          T1656        	Attacker impersonates the CEO
+Gather Victim Identity  T1589        	Finance staff selected as target
+Information	
+Trusted Relationship   	T1199	        Exploits trust between executives and finance
 
 
 
