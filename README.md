@@ -214,7 +214,104 @@ finance@recipient.com
 
 ---
 
+# 6. Analyze the Social Engineering Tactics
 
+The attacker relies primarily on psychological manipulation.
+
+**Authority**
+
+The attacker pretends to be the CEO.
+
+Employees are more likely to comply with requests from senior executives.
+
+**Urgency**
+
+```splunk
+ Immediate Action Required
+```
+Creates pressure to act quickly.
+
+---
+
+ **Familiarity**
+
+ Financial Pressure
+
+The email requests a wire transfer, a common objective in BEC attacks.
+
+---
+
+**Minimal Information**
+
+The email is intentionally brief.
+
+Short emails reduce the likelihood that recipients will notice inconsistencies.
+
+---
+
+# 7. Thinking Like a SOC Analyst
+
+**Initial Assessment**
+
+The email exhibits multiple indicators of a Business Email Compromise attempt.
+
+---
+
+**Evidence Collected**
+
+- SPF failed
+- DKIM failed
+- DMARC failed
+- Message-ID references attacker infrastructure
+- SMTP relay uses attacker-controlled domain
+- CEO impersonation
+- Wire transfer request
+- Urgency
+- Generic wording
+
+ ---
+
+ **Risk Assessment**
+
+**Severity** : High
+
+Reason:
+
+- Direct financial fraud
+- Executive impersonation
+- Finance department targeted
+- Multiple authentication failures
+- High likelihood of financial loss if successful
+
+ ---
+
+ **Recommended Actions**
+ 
+1. Quarantine the email.
+2. Block attacker-infrastructure.com and attacker-infra.com.
+3. Verify any financial requests through an approved out-of-band communication channel.
+4. Search the mail environment for similar messages.
+5. Notify the finance department and relevant stakeholders.
+6. Monitor for additional BEC attempts targeting executives or finance personnel.
+7. Preserve the email and headers for further investigation and threat intelligence.
+
+---
+
+**Final Analyst Verdict**
+
+---
+
+**Classification**: Business Email Compromise (BEC)
+
+**Severity**: High
+
+**Confidence**: High
+
+**Disposition**: True Positive (Malicious)
+
+**Analyst Summary**
+
+The investigation confirms that the email is a Business Email Compromise attempt designed to fraudulently obtain a wire transfer by impersonating the organization's CEO. Technical evidence—including SPF, DKIM, and DMARC failures, attacker-controlled mail infrastructure, and a suspicious Message-ID—indicates sender spoofing. The attacker combines executive impersonation with urgency and familiarity to pressure the finance department into bypassing normal verification procedures. Immediate containment, notification, and blocking actions are recommended to prevent financial loss and identify any similar phishing attempts.
 
 
 
