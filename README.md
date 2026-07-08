@@ -204,18 +204,16 @@ finance@recipient.com
 
 # 5. Finance teams are common BEC targets.
 
-**MITRE Technique**   	**ID**     	**Evidence**
-  
-Phishing	               T1566        	Fraudulent email sent to finance department
+## MITRE ATT&CK Mapping
 
-Spearphishing	          T1566.001	    Targeted message aimed at finance personnel
+| Technique | MITRE ATT&CK ID | Evidence |
+|-----------|-----------------|----------|
+| Phishing | T1566 | Fraudulent email sent to the finance department |
+| Spearphishing | T1566.001 | Targeted email requesting a wire transfer |
+| Impersonation | T1656 | Attacker impersonates the CEO |
+| Trusted Relationship | T1199 | Exploits trust between executives and finance staff |
 
-Impersonation	          T1656        	Attacker impersonates the CEO
-
-Gather Victim Identity  T1589        	Finance staff selected as target
-Information	
-
-Trusted Relationship   	T1199	        Exploits trust between executives and finance
+---
 
 
 
