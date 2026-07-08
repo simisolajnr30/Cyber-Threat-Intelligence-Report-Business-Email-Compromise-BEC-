@@ -76,8 +76,69 @@ This strongly suggests sender spoofing.
 
 ---
 
+ **Message-ID**
 
+ ```splunk
+ <6666@attacker-infra.com>
+```
+A legitimate corporate email would normally generate a Message-ID associated with the organization's mail system.
 
+Instead, this email originates from an attacker-controlled domain.
+
+---
+
+ **Received Headers**
+
+ ```splunk
+  Received:
+from attacker-infrastructure.com
+```
+This identifies the first mail server that handled the email.
+
+Instead of an official corporate mail server, the message originated from attacker-infrastructure.com, indicating attacker-controlled infrastructure
+
+---  
+
+# 3. Identify Attacker Infrastructure
+
+Several indicators reveal the attacker's infrastructure.
+
+Infrastructure Used
+Domain
+
+```splunk
+ attacker-infrastructure.com
+```
+Likely used as the outbound SMTP server.
+
+---
+
+ **Local SMTP Host**
+
+ ```splunk
+  localhost.localdomain
+127.0.0.1
+```
+Shows the attacker generated the email from a local SMTP service before relaying it externally.
+
+---
+
+ **Message-ID Domain**
+
+ ```splunk
+ attacker-infra.com
+```
+This domain appears inside the Message-ID and likely belongs to the attacker's infrastructure.
+
+ ---
+ 
+ **Infrastructure Summary**
+  infrastructure	Purpose
+  ---
+attacker-infrastructure.com	SMTP relay
+attacker-infra.com	Message-ID generation
+localhost.localdomain	Local mail server 
+ 
 
 
 
