@@ -17,6 +17,11 @@ Rather than using malware or malicious attachments, the attacker relies on socia
 4. No legitimate authentication
 5. Use of deceptive email infrastructure
 
+---
+
+**Screenshot**
+ ![Business Email Compromise (BEC) Email](BEC.png)
+
 
 # 2. Analyze the Email Header
 
