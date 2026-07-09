@@ -20,6 +20,7 @@ Rather than using malware or malicious attachments, the attacker relies on socia
 ---
 
 **Screenshot**
+
  ![Business Email Compromise (BEC) Email](BEC.png)
 
 
